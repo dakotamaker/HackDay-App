@@ -1,0 +1,40 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.jda.captuvo": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "dff-cordova-plugin-honeywell": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        }
+    },
+    "dependent_plugins": {
+        "dff-cordova-plugin-common": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
+        }
+    }
+}

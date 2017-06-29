@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+        "spec": "git+https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:dff-solutions/dff.CordovaPlugin.Common.git",
+          "sshUrl": "git+ssh://git@github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+          "httpsUrl": "git+https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+          "gitUrl": "git://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+          "shortcut": "github:dff-solutions/dff.CordovaPlugin.Common",
+          "directUrl": "https://raw.githubusercontent.com/dff-solutions/dff.CordovaPlugin.Common/master/package.json"
+        }
+      },
+      "/Users/evantobin/dev/mapper/node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+  "_id": "dff-cordova-plugin-common@1.2.0",
+  "_inCache": true,
+  "_location": "/dff-cordova-plugin-common",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+    "spec": "git+https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:dff-solutions/dff.CordovaPlugin.Common.git",
+      "sshUrl": "git+ssh://git@github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+      "httpsUrl": "git+https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+      "gitUrl": "git://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+      "shortcut": "github:dff-solutions/dff.CordovaPlugin.Common",
+      "directUrl": "https://raw.githubusercontent.com/dff-solutions/dff.CordovaPlugin.Common/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/dff-solutions/dff.CordovaPlugin.Common.git#24fc5776924b176d4037ccc3ff2d903813580fda",
+  "_shasum": "b55bbbd27df889a830a3c336df04a2cb45a80b9c",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/dff-solutions/dff.CordovaPlugin.Common.git",
+  "_where": "/Users/evantobin/dev/mapper/node_modules",
+  "author": {
+    "name": "Frank Koenigstein"
+  },
+  "bugs": {
+    "url": "https://github.com/dff-solutions/dff.CordovaPlugin.Common/issues"
+  },
+  "dependencies": {},
+  "description": "dff cordova plugin common",
+  "devDependencies": {},
+  "directories": {
+    "doc": "docs"
+  },
+  "gitHead": "24fc5776924b176d4037ccc3ff2d903813580fda",
+  "homepage": "https://github.com/dff-solutions/dff.CordovaPlugin.Common#readme",
+  "keywords": [
+    "cordova",
+    "plugin",
+    "common",
+    "dff",
+    "solutions"
+  ],
+  "main": "www/common.js",
+  "name": "dff-cordova-plugin-common",
+  "optionalDependencies": {},
+  "readme": "# dff.CordovaPlugin.Common\n## Supported Platforms\n  * Android\n\n## Installation\n\n```sh\n$ cordova plugin add https://github.com/dff-solutions/dff.CordovaPlugin.Common.git\n```\n## Usage\n\n### Actions\n\n#### onLog\n```js\n/**\n * Listen to logs from any plugin.\n *\n * @name onLog\n * @param {function} success Success callback\n * @param {function} error Error callback\n */\nCommonPlugin\n    .onLog(function (log) {\n        console.log(log.type, log.tag, log.msg);\n    }, function(reason) {\n        console.log(reason);\n    });\n```\n\n#### setSystemProperty\n```js\n/**\n * Set a Java system property.\n * Args key value pairs are interpreted as system properties.\n *\n * @name setSystemProperty\n * @param {function} success Success callback\n * @param {function} error Error callback\n * @param {Object} args Named argument\n */\nCommonPlugin\n    .setSystemProperty(function () {\n        console.log('success');\n    }, function(reason) {\n        console.log(reason);\n    }, {\n        \"http.keepAlive\": \"false\"\n    });\n```\n\n## Documentation\n- <a href=\"https://dff-solutions.github.io/dff.CordovaPlugin.Common/\" target=\"_blank\" >JAVA DOC</a>\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dff-solutions/dff.CordovaPlugin.Common.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.0"
+}

@@ -4,7 +4,7 @@ import { RoutePage } from '../route/route';
 
 declare var cordova: any;
 declare var captuvo: any;
-declare var plugins: any;
+declare var Honeywell: any;
 
 @Component({
   selector: 'page-home',
@@ -34,8 +34,11 @@ export class HomePage {
         self.cd.detectChanges();
         self.barcodes.push(barcode);
       });
-    }else if(plugins.honeywell!=undefined) {
-      plugins.honeywell.listenForScans(function(barcode) {
+    }
+    if(Honeywell!=undefined) {
+      Honeywell.onBarcodeEvent(function (data) {
+        console.log(data.barcodeData);
+        var barcode = data.barcodeData;
         if(self.barcodes.length == 0){
           self.starting = "Scan your ending point bar code...";
           self.fromBarcode = barcode.toString();
@@ -47,10 +50,9 @@ export class HomePage {
         }
         self.cd.detectChanges();
         self.barcodes.push(barcode);
-      }, function(error) {
-        // do something with 'errir'
-      console.log('Something went wrong: ' + error);
-      });
+    }, function (reason) {
+        console.error(reason);
+    });
     } else {
       this.fakeBarcode();
     }
