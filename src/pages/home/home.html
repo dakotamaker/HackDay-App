@@ -1,18 +1,18 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding no-bounce>
+  <div id="wrapper">
+    <h1>QuickPath</h1>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+    <p class="displayTest">
+      {{starting}}
+    </p>
+    <div id="destination">
+      <p *ngIf="fromBarcode.length>0"> From: <span>{{fromBarcode}}</span></p>
+      <p *ngIf="toBarcode.length>0">To: <span>{{toBarcode}}</span></p>
+    </div>
+    <div class="spinnerCheck">
+      <ion-spinner *ngIf="!scanned"></ion-spinner>
+      <ion-icon name="checkmark-circle-outline" *ngIf="scanned"></ion-icon>
+    </div>
+    <button ion-button (click)="fakeBarcode()">Mock Barcode</button>
+  </div>
+ </ion-content>

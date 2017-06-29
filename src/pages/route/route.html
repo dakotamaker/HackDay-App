@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons start>
+        <button ion-button (click)="backHome()">
+        <span ion-text showWhen="ios">Back</span>
+        <ion-icon name="md-arrow-back" showWhen="android,windows"></ion-icon>
+      </button>
+      </ion-buttons>
+      <ion-title>Route</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+  <div id="wrapper">
+    <h1>QuickPath Route from {{fromBarcode}} to {{toBarcode}}</h1>
+  </div>
+ </ion-content>
