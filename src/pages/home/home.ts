@@ -16,12 +16,24 @@ export class HomePage {
   public fromBarcode: any = "";
   barcodes: number[] = [];
   scanned: boolean = false;
+  error: boolean = false;
+
   starting: string;
 
   constructor(public navCtrl: NavController, public appCtrl: App, private cd: ChangeDetectorRef) {
     var self = this;
     if(captuvo!=undefined){
       captuvo.registerScannerCallback(function(barcode) {
+           if(!(barcode.match(/([0-9]+:[[0-9]+)/g))) {
+            self.error = true;
+            self.cd.detectChanges();
+            return;
+          }
+          else {
+            self.error=false;
+            self.cd.detectChanges();
+          }
+
         if(self.barcodes.length == 0){
           self.starting = "Scan your ending point bar code...";
           self.fromBarcode = barcode.toString();
@@ -39,6 +51,16 @@ export class HomePage {
       Honeywell.onBarcodeEvent(function (data) {
         console.log(data.barcodeData);
         var barcode = data.barcodeData;
+           if(!(barcode.match(/([0-9]+:[[0-9]+)/g))) {
+            self.error= true;
+            self.cd.detectChanges();
+            return;
+          }
+          else {
+            self.error=false;
+            self.cd.detectChanges();
+          }
+
         if(self.barcodes.length == 0){
           self.starting = "Scan your ending point bar code...";
           self.fromBarcode = barcode.toString();
