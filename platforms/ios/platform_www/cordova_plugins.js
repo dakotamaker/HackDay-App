@@ -72,6 +72,19 @@ module.exports = [
         "clobbers": [
             "Honeywell"
         ]
+    },
+    {
+        "id": "cordova-plugin-x-toast.Toast",
+        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+        "pluginId": "cordova-plugin-x-toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
+    },
+    {
+        "id": "cordova-plugin-x-toast.tests",
+        "file": "plugins/cordova-plugin-x-toast/test/tests.js",
+        "pluginId": "cordova-plugin-x-toast"
     }
 ];
 module.exports.metadata = 
@@ -85,7 +98,8 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "com.jda.captuvo": "1.0.0",
     "dff-cordova-plugin-common": "1.2.0",
-    "dff-cordova-plugin-honeywell": "0.0.1"
+    "dff-cordova-plugin-honeywell": "0.0.1",
+    "cordova-plugin-x-toast": "2.6.0"
 };
 // BOTTOM OF METADATA
 });

@@ -1,3 +1,4 @@
 {
-    "ExternalAccessory.framework": 1
+    "ExternalAccessory.framework": 1,
+    "QuartzCore.framework": 1
 }

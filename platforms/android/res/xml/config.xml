@@ -27,10 +27,13 @@
         <param name="android-package" value="com.dff.cordova.plugin.honeywell.HoneywellPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Toast">
+        <param name="android-package" value="nl.xservices.plugins.Toast" />
+    </feature>
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://10.47.36.92:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="http://10.47.36.42:8100" />
@@ -38,6 +41,7 @@
     <allow-navigation href="http://192.168.1.233:8100" />
     <allow-navigation href="http://192.168.1.233:8102" />
     <allow-navigation href="http://10.47.36.92:8100" />
+    <allow-navigation href="http://10.47.36.25:8100" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -64,6 +68,7 @@
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="orientation" value="portrait" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />

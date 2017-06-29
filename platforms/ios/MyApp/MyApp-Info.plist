@@ -35,15 +35,12 @@
     <key>UISupportedInterfaceOrientations</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
-      <string>UIInterfaceOrientationLandscapeLeft</string>
-      <string>UIInterfaceOrientationLandscapeRight</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
     </array>
     <key>UISupportedInterfaceOrientations~ipad</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
-      <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
-      <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
     <key>UIRequiresFullScreen</key>
     <true/>
@@ -71,6 +68,16 @@
           <key>NSExceptionAllowsInsecureHTTPLoads</key>
           <true/>
         </dict>
+        <key>10.47.36.92</key>
+        <dict>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+        </dict>
+        <key>10.47.36.25</key>
+        <dict>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+        </dict>
       </dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
@@ -80,6 +87,10 @@
       <string>com.honeywell.scansled.protocol.decoder</string>
       <string>com.honeywell.scansled.protocol.msr</string>
       <string>com.honeywell.scansled.protocol.pm</string>
+    </array>
+    <key>UIInterfaceOrientation</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
     </array>
   </dict>
 </plist>

@@ -1,6 +1,7 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { App, NavController } from 'ionic-angular';
 import { RoutePage } from '../route/route';
+import { ToastController } from 'ionic-angular';
 
 declare var cordova: any;
 declare var captuvo: any;
@@ -20,12 +21,13 @@ export class HomePage {
 
   starting: string;
 
-  constructor(public navCtrl: NavController, public appCtrl: App, private cd: ChangeDetectorRef) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, public appCtrl: App, private cd: ChangeDetectorRef) {
     var self = this;
     if(captuvo!=undefined){
       captuvo.registerScannerCallback(function(barcode) {
            if(!(barcode.match(/([0-9]+:[[0-9]+)/g))) {
             self.error = true;
+            self.toastError();
             self.cd.detectChanges();
             return;
           }
@@ -52,7 +54,7 @@ export class HomePage {
         console.log(data.barcodeData);
         var barcode = data.barcodeData;
            if(!(barcode.match(/([0-9]+:[[0-9]+)/g))) {
-            self.error= true;
+            self.toastError();
             self.cd.detectChanges();
             return;
           }
@@ -81,7 +83,16 @@ export class HomePage {
     this.starting = "Scan your starting point bar code...";
   }
   fakeBarcode(){
-    this.navCtrl.setRoot(RoutePage,{'from':1234,'to':1234});
+    this.navCtrl.setRoot(RoutePage,{'from':"10:3",'to':"35:17"});
+  }
+  toastError() {
+    let toast = this.toastCtrl.create({
+      message: 'Invalid Barcode',
+      duration: 3000,
+      position: 'top',
+      cssClass: 'toast'
+    });
+    toast.present();
   }
 
 }

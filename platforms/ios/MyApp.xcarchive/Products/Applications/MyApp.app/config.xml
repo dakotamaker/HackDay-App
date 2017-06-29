@@ -35,15 +35,21 @@
     <feature name="CaptuvoCDV">
         <param name="ios-package" value="CaptuvoCDV" />
     </feature>
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
+    </feature>
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.1.233:8100" />
+    <content original-src="index.html" src="http://10.47.36.92:8100" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="http://10.47.36.42:8100" />
     <allow-navigation href="http://10.23.174.82:8100" />
     <allow-navigation href="http://192.168.1.233:8100" />
+    <allow-navigation href="http://192.168.1.233:8102" />
+    <allow-navigation href="http://10.47.36.92:8100" />
+    <allow-navigation href="http://10.47.36.25:8100" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -97,6 +103,7 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="orientation" value="portrait" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="android-minSdkVersion" value="16" />

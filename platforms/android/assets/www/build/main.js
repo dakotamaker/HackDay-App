@@ -45230,9 +45230,19 @@ var HomePage = (function () {
         this.fromBarcode = "";
         this.barcodes = [];
         this.scanned = false;
+        this.error = false;
         var self = this;
         if (captuvo != undefined) {
             captuvo.registerScannerCallback(function (barcode) {
+                if (!(barcode.match(/([0-9]+:[[0-9]+)/g))) {
+                    self.error = true;
+                    self.cd.detectChanges();
+                    return;
+                }
+                else {
+                    self.error = false;
+                    self.cd.detectChanges();
+                }
                 if (self.barcodes.length == 0) {
                     self.starting = "Scan your ending point bar code...";
                     self.fromBarcode = barcode.toString();
@@ -45247,9 +45257,19 @@ var HomePage = (function () {
                 self.barcodes.push(barcode);
             });
         }
-        else if (Honeywell != undefined) {
+        if (Honeywell != undefined) {
             Honeywell.onBarcodeEvent(function (data) {
+                console.log(data.barcodeData);
                 var barcode = data.barcodeData;
+                if (!(barcode.match(/([0-9]+:[[0-9]+)/g))) {
+                    self.error = true;
+                    self.cd.detectChanges();
+                    return;
+                }
+                else {
+                    self.error = false;
+                    self.cd.detectChanges();
+                }
                 if (self.barcodes.length == 0) {
                     self.starting = "Scan your ending point bar code...";
                     self.fromBarcode = barcode.toString();
@@ -45262,9 +45282,8 @@ var HomePage = (function () {
                 }
                 self.cd.detectChanges();
                 self.barcodes.push(barcode);
-            }, function (error) {
-                // do something with 'errir'
-                console.log('Something went wrong: ' + error);
+            }, function (reason) {
+                console.error(reason);
             });
         }
         else {
@@ -55903,8 +55922,10 @@ var RoutePage = (function () {
         this.navParams = navParams;
         this.toBarcode = "";
         this.fromBarcode = "";
+        var grid = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 1, 1, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
         this.fromBarcode = navParams.get('from');
         this.toBarcode = navParams.get('to');
+        findPath(grid, 1, 1, 6, 1);
     }
     RoutePage.prototype.backHome = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
@@ -55918,6 +55939,20 @@ RoutePage = __decorate([
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* App */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* ChangeDetectorRef */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], RoutePage);
 
+function findPath(grid, startX, startY, endX, endY) {
+    var easystar = new EasyStar.js();
+    easystar.setGrid(grid);
+    easystar.setAcceptableTiles([0]);
+    easystar.findPath(startX, startY, endX, endY, function (path) {
+        if (path === null) {
+            alert("Path was not found");
+        }
+        else {
+            alert("Path found!");
+        }
+    });
+    easystar.calculate();
+}
 //# sourceMappingURL=route.js.map
 
 /***/ }),

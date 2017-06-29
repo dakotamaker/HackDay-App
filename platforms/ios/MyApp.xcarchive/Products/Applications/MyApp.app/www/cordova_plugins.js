@@ -56,6 +56,35 @@ module.exports = [
         "clobbers": [
             "captuvo"
         ]
+    },
+    {
+        "id": "dff-cordova-plugin-common.common",
+        "file": "plugins/dff-cordova-plugin-common/www/common.js",
+        "pluginId": "dff-cordova-plugin-common",
+        "clobbers": [
+            "CommonPlugin"
+        ]
+    },
+    {
+        "id": "dff-cordova-plugin-honeywell.honeywell",
+        "file": "plugins/dff-cordova-plugin-honeywell/www/honeywell.js",
+        "pluginId": "dff-cordova-plugin-honeywell",
+        "clobbers": [
+            "Honeywell"
+        ]
+    },
+    {
+        "id": "cordova-plugin-x-toast.Toast",
+        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+        "pluginId": "cordova-plugin-x-toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
+    },
+    {
+        "id": "cordova-plugin-x-toast.tests",
+        "file": "plugins/cordova-plugin-x-toast/test/tests.js",
+        "pluginId": "cordova-plugin-x-toast"
     }
 ];
 module.exports.metadata = 
@@ -67,7 +96,10 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.2.2",
     "cordova-plugin-whitelist": "1.3.1",
     "ionic-plugin-keyboard": "2.2.1",
-    "com.jda.captuvo": "1.0.0"
+    "com.jda.captuvo": "1.0.0",
+    "dff-cordova-plugin-common": "1.2.0",
+    "dff-cordova-plugin-honeywell": "0.0.1",
+    "cordova-plugin-x-toast": "2.6.0"
 };
 // BOTTOM OF METADATA
 });

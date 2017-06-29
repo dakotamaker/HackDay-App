@@ -30,6 +30,9 @@
         },
         "dff-cordova-plugin-honeywell": {
             "PACKAGE_NAME": "in.evantob.mapperApp"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "in.evantob.mapperApp"
         }
     },
     "dependent_plugins": {

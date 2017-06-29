@@ -22,6 +22,9 @@
 		5B0EC40C93F5436EB7875F82 /* CaptuvoCDV.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6AF5E65844D6A8FC79978 /* CaptuvoCDV.m */; };
 		7B2100936B2A43A9A43EA2B2 /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0861CA9958A24C81B71CF9C6 /* libCaptuvoSDK.a */; };
 		F37D815355A44FC2B7668D96 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8695965F84D44824BA2AACCE /* ExternalAccessory.framework */; };
+		B43722B8FF964F28843DAF11 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = CACC93F8EA2544BBBED124C1 /* Toast+UIView.m */; };
+		478EAC02DCC44EE3A378531E /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FD15A4D504DB99D9CDB87 /* Toast.m */; };
+		A3939F37DCAE4CD19CCC49F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39EE7A30A14CA2825566F2 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,11 @@
 		4B26AFCF0EB649369183840D /* Captuvo.h */ = {isa = PBXFileReference; name = "Captuvo.h"; path = "com.jda.captuvo/Captuvo.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		E38F17CEF86646D5B7918313 /* CaptuvoCDV.h */ = {isa = PBXFileReference; name = "CaptuvoCDV.h"; path = "com.jda.captuvo/CaptuvoCDV.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		8695965F84D44824BA2AACCE /* ExternalAccessory.framework */ = {isa = PBXFileReference; name = "ExternalAccessory.framework"; path = "System/Library/Frameworks/ExternalAccessory.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		CACC93F8EA2544BBBED124C1 /* Toast+UIView.m */ = {isa = PBXFileReference; name = "Toast+UIView.m"; path = "cordova-plugin-x-toast/Toast+UIView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5B8FD15A4D504DB99D9CDB87 /* Toast.m */ = {isa = PBXFileReference; name = "Toast.m"; path = "cordova-plugin-x-toast/Toast.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BBCE0CBA713440ED961B1A7E /* Toast+UIView.h */ = {isa = PBXFileReference; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C6670AF0F8C94CC9B2C20F39 /* Toast.h */ = {isa = PBXFileReference; name = "Toast.h"; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AC39EE7A30A14CA2825566F2 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				7B2100936B2A43A9A43EA2B2 /* libCaptuvoSDK.a in Frameworks */,
 				F37D815355A44FC2B7668D96 /* ExternalAccessory.framework in Frameworks */,
+				A3939F37DCAE4CD19CCC49F3 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +177,7 @@
 			children = (
 				0861CA9958A24C81B71CF9C6 /* libCaptuvoSDK.a */,
 				8695965F84D44824BA2AACCE /* ExternalAccessory.framework */,
+				AC39EE7A30A14CA2825566F2 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +219,10 @@
 				2BB6AF5E65844D6A8FC79978 /* CaptuvoCDV.m */,
 				4B26AFCF0EB649369183840D /* Captuvo.h */,
 				E38F17CEF86646D5B7918313 /* CaptuvoCDV.h */,
+				CACC93F8EA2544BBBED124C1 /* Toast+UIView.m */,
+				5B8FD15A4D504DB99D9CDB87 /* Toast.m */,
+				BBCE0CBA713440ED961B1A7E /* Toast+UIView.h */,
+				C6670AF0F8C94CC9B2C20F39 /* Toast.h */,
 			);
 			name = Plugins;
 			path = MyApp/Plugins;
@@ -343,6 +357,8 @@
 				157BD1F91E48492299777D41 /* CDVStatusBar.m in Sources */,
 				698840E41B6144E2950D43E6 /* IonicKeyboard.m in Sources */,
 				5B0EC40C93F5436EB7875F82 /* CaptuvoCDV.m in Sources */,
+				B43722B8FF964F28843DAF11 /* Toast+UIView.m in Sources */,
+				478EAC02DCC44EE3A378531E /* Toast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
