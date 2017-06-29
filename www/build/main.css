@@ -24777,3 +24777,11 @@ page-home #destination p span {
   color: #ccc;
   font-weight: 400;
 }
+
+page-route canvas {
+  overflow-y: scroll;
+  margin: 0 auto;
+  width: 80vw;
+  height: auto;
+  display: block;
+}
