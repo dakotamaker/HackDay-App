@@ -63,7 +63,10 @@ export class RoutePage {
             yPos += size;
         }
 
-        this.findPath(grid, 28, 30, 9, 27, size);
+        var toCords = this.toBarcode.split(":");
+        var fromCords = this.fromBarcode.split(":");
+        this.findPath(grid, parseInt(fromCords[0]), parseInt(fromCords[1]), parseInt(toCords[0]), parseInt(toCords[1]), size);
+
     }
 
 

@@ -83,7 +83,7 @@ export class HomePage {
     this.starting = "Scan your starting point bar code...";
   }
   fakeBarcode(){
-    this.navCtrl.setRoot(RoutePage,{'from':"10:3",'to':"35:17"});
+    this.navCtrl.setRoot(RoutePage,{'from':"47:27",'to':"68:20"});
   }
   toastError() {
     let toast = this.toastCtrl.create({
