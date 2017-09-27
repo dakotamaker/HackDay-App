@@ -18,7 +18,6 @@ export class HomePage {
   barcodes: number[] = [];
   scanned: boolean = false;
   error: boolean = false;
-
   starting: string;
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController, public appCtrl: App, private cd: ChangeDetectorRef) {
