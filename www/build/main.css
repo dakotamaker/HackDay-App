@@ -24730,6 +24730,12 @@ ion-navbar.toolbar {
   }
 }
 
+.toast div {
+  color: #fff;
+  background: #f44b42;
+  border-radius: 15px;
+}
+
 page-home #wrapper {
   width: 65vw;
   height: 100%;
